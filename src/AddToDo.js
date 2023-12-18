@@ -1,8 +1,7 @@
 import React from 'react'
 import { RiAddCircleFill } from "react-icons/ri";
 
-
-const AddToDo = () => {
+const AddToDo = (newItem, setNewItem) => {
   return (
     <form>
         <input 
@@ -11,6 +10,8 @@ const AddToDo = () => {
         id='addItem'
         required
         autoFocus
+        value={newItem}
+        onChange = {(e)=> setNewItem(e.target.value)}
         />
         <button
         type='submit'

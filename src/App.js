@@ -18,6 +18,11 @@ function App() {
       todo: "Master React",
     },
   ]);
+  const [newItem, setNewItem] = useState('')
+
+  const handleSubmit = (e) => {
+    setnewItem(newItem)
+  }
   const handleToggle = (id) => {
     setTodos(todos.map((todo) => todo.id === id ? {...todo, checked:!todo.checked} : todo))
   };
@@ -31,7 +36,12 @@ function App() {
       <Header 
       //title = "List" for props (child to parent)
       />
-      <AddToDo/>
+      <AddToDo
+      newItem = {newItem}
+      setNewItem = {setNewItem}
+      handleSubmit = {handleSubmit}
+      />
+      
       <Content 
       todos = {todos}
       handleToggle = {handleToggle}
