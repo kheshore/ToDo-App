@@ -79,6 +79,7 @@ function App() {
   // return statement for App
   return (
     <div className="App">
+      <div>
       <Header 
       //title = "List" for props (child to parent)
       />
@@ -99,6 +100,7 @@ function App() {
       handleToggle = {handleToggle}
       handleDelete = {handleDelete}
       />
+      </div>
       <Footer 
       count = {count}
       />  
