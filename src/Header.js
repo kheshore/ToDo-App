@@ -9,6 +9,7 @@ const Header = (props) => {
       style={{fontSize: "25px", marginRight: "10px"}}
       />
        <h1>{props.title}</h1>
+       <p style={{margin: "21.440px"}}><br/>By Kheshore J R</p>
     </header>
     // value of the title is fetch from parent (if decleared)
     // Or default value is obtained 
