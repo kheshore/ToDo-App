@@ -1,6 +1,8 @@
 .App {
   min-height: 100vh;
   position: relative;
+  background-color: black;
+  color: white;
 }
 
 Header {
@@ -8,13 +10,13 @@ Header {
   justify-content: center;
   align-items: center;
   height: 50px;
-  background-color: cornflowerblue;
+  background-color: rgba(255, 255, 255, 0.082);
   color: white;
   margin: 0;
   padding: 10px;
 }
 
-main{
+main {
   display: flex;
   justify-content: center;
   font-size: 20px;
@@ -25,7 +27,7 @@ Footer {
   justify-content: center;
   align-items: center;
   height: 50px;
-  background-color: cornflowerblue;
+  background-color: rgba(255, 255, 255, 0.082);
   color: white;
   margin: 0;
   position: fixed;
@@ -33,30 +35,37 @@ Footer {
   width: 100%;
 }
 
-.item{
+.item {
   display: flex;
   gap: 5px;
   padding-bottom: 10px;
   justify-content: space-between;
   align-items: center;
+  color: white;
 }
 
-.item input[type="checkbox"]{
-  width: 16px;
-  height: 16px;
+.item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
   margin: 0;
   padding: 0;
-  margin-right: 5px;
+  margin-right: 10px;
   cursor: pointer;
 }
 
-ul{
-  padding: 0;
-  margin: 0;
-  gap: 5px;
+.item input[type="checkbox"]:checked {
+  accent-color: yellowgreen;
 }
 
-.item svg{
+ul {
+  align-items: center;
+  padding: 15px;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.082);
+  border-radius: 8px;
+}
+
+.item svg {
   cursor: pointer;
   margin: 0;
   padding: 0;
@@ -64,11 +73,11 @@ ul{
   width: 1.5rem;
 }
 
-.item svg:hover{
-  fill: red;
+.item svg:hover {
+  fill: rgba(253, 0, 0, 0.555);
 }
 
-form{
+form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,29 +85,39 @@ form{
   margin: 20px;
 }
 
-form input{
+form input {
   width: 300px;
   height: 30px;
   text-align: center;
   font-size: 20px;
-  border-color: cornflowerblue ;
+  border-color: rgba(255, 255, 255, 0.082);
   border-width: 5px;
+  background-color: black;
+  color: white;
 }
 
-form svg{
-  height: 30px;
-  width: 30px;
-  color: rgb(255, 255, 255);
+.search{
+  width: 360px;
+  text-align: center;
 }
 
-form svg:hover, button:hover{
-  cursor: pointer;
+form svg {
+  height: 50px;
+  width: 50px;
+  color: white;
 }
 
-form button{
+form svg:hover,
+button:hover {
+  cursor: pointer; 
+  opacity: 0.8;
+}
+
+form button {
   border-radius: 50%;
   height: 50px;
   width: 50px;
   border: none;
-  background-color: cornflowerblue;
+  background-color: rgb(0, 0, 0);
+  color: white;
 }

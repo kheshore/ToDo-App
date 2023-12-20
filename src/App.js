@@ -4,6 +4,7 @@ import Content from './Content';
 import Footer from './Footer';
 import { useState } from "react";
 import AddToDo from "./AddToDo"
+import Searcher from './Searcher';
 
 // Main App Function
 function App() {
@@ -20,6 +21,9 @@ function App() {
   // setNewTodo is a function to store new todo
   const [newTodo, setNewTodo] = useState('')
 
+  // state to store search
+  const [search, setSearch] = useState('')
+   
   // addTodo is a function to add new todo
   // addNewTodo is an object
   // newTodo is a string with the value of old todos and new todo
@@ -83,9 +87,15 @@ function App() {
       setNewTodo = {setNewTodo}
       handleSubmit = {handleSubmit}
       />
-      
+      <Searcher 
+      search = {search}
+      setSearch = {setSearch}
+      />
       <Content 
-      todos = {todos}
+      // todos is the list of todos
+      // filter is used to filter out the todos that are not equal to the search
+      // todo.todo is the value of the todo in todos
+      todos = {todos.filter((todo) => (todo.todo).toLowerCase().includes(search.toLowerCase()))}
       handleToggle = {handleToggle}
       handleDelete = {handleDelete}
       />
